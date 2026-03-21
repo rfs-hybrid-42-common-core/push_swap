@@ -118,6 +118,7 @@ To ensure your algorithm is fully optimized and memory leak-free, it is highly r
 * **[Push_swap Visualizer by o-reo](https://github.com/o-reo/push_swap_visualizer):** The classic, highly popular C++ graphical visualizer (showcased in the GIF above) that lets you watch your stacks get sorted in real-time.
   * 🔧 *Troubleshooting Note:* If you encounter a `decltype(&pclose)` compilation error on newer Linux systems when building this visualizer, open `src/pushswap.cpp`, go to line 17, and change `decltype(&pclose)` to `int (*)(FILE*)` to bypass the strict compiler warning.
 * **[Push_swap Web Visualizer](https://push-swap42-visualizer.vercel.app/):** An excellent web-based manual visualizer. It allows you to step through your operations one by one and see exactly how your algorithm manipulates the stacks in real-time.
+* **[Random Number Generator](https://www.calculatorsoup.com/calculators/statistics/random-number-generator.php):** A handy web tool by CalculatorSoup to quickly generate a unique set of random integers for manual testing without relying on terminal commands.
 
 ### 🚨 The Norm
 Moulinette relies on a program called `norminette` to check if your files comply with the 42 Norm. Every single `.c` and `.h` file must pass this check. If there is a norm error, you will receive a 0.
