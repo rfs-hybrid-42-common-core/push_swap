@@ -6,7 +6,7 @@
 #    By: maaugust <maaugust@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/21 18:04:18 by maaugust          #+#    #+#              #
-#    Updated: 2026/03/22 05:22:21 by maaugust         ###   ########.fr        #
+#    Updated: 2026/03/22 05:50:24 by maaugust         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,10 +21,6 @@ INCLUDES       = -Iincludes -Ilibft/includes
 B_INCLUDES     = -Ibonus/includes
 RM             = rm -rf
 
-# ================================== LIBFT =================================== #
-LIBFT_PATH     = ./libft
-LIBFT_LIB      = $(LIBFT_PATH)/libft.a
-
 # ================================== COLORS ================================== #
 GREEN          := \033[32m
 RED            := \033[31m
@@ -32,6 +28,10 @@ YELLOW         := \033[33m
 CYAN           := \033[36m
 RESET          := \033[0m
 BOLD           := \033[1m
+
+# ================================== LIBFT =================================== #
+LIBFT_PATH     = ./libft
+LIBFT_LIB      = $(LIBFT_PATH)/libft.a
 
 # =============================== SOURCE FILES =============================== #
 # Mandatory files
