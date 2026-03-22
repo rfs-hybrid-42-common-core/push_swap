@@ -6,7 +6,7 @@
 #    By: maaugust <maaugust@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/21 18:04:18 by maaugust          #+#    #+#              #
-#    Updated: 2026/03/21 05:34:36 by maaugust         ###   ########.fr        #
+#    Updated: 2026/03/22 05:22:21 by maaugust         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,12 +68,12 @@ all: $(NAME)
 bonus: $(B_NAME)
 
 $(NAME): $(LIBFT_LIB) $(OBJ)
-	@printf "$(GREEN)✔ Mandatory objects built successfully.$(RESET)\n"
+	@printf "$(GREEN)✔ Push_swap mandatory objects built successfully.$(RESET)\n"
 	@$(CC) $(CFLAGS) $(OBJ) $(LIBFT_LIB) -o $(NAME)
 	@printf "$(GREEN)$(BOLD)✔ Build complete → $(NAME)$(RESET)\n"
 
 $(B_NAME): $(LIBFT_LIB) $(CORE_OBJ) $(B_OBJ)
-	@printf "$(GREEN)✔ Bonus objects built successfully.$(RESET)\n"
+	@printf "$(GREEN)✔ Push_swap bonus objects built successfully.$(RESET)\n"
 	@$(CC) $(CFLAGS) $(CORE_OBJ) $(B_OBJ) $(LIBFT_LIB) -o $(B_NAME)
 	@printf "$(GREEN)$(BOLD)✔ Build complete → $(B_NAME)$(RESET)\n"
 
