@@ -6,7 +6,7 @@
 #    By: maaugust <maaugust@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/21 18:04:18 by maaugust          #+#    #+#              #
-#    Updated: 2026/03/22 05:50:24 by maaugust         ###   ########.fr        #
+#    Updated: 2026/03/24 18:25:19 by maaugust         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ B_NAME         = checker
 
 # ============================== COMPILER FLAGS ============================== #
 CC             = cc
-CFLAGS         = -Wall -Wextra -Werror
+CFLAGS         = -Wall -Wextra -Werror -MMD -MP
 INCLUDES       = -Iincludes -Ilibft/includes
 B_INCLUDES     = -Ibonus/includes
 RM             = rm -rf
@@ -99,3 +99,7 @@ fclean: clean
 re: fclean all
 
 .PHONY: all bonus clean fclean re
+
+# =============================== DEPENDENCIES =============================== #
+-include $(OBJ:.o=.d)
+-include $(B_OBJ:.o=.d)
