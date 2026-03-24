@@ -149,19 +149,19 @@ norminette -R CheckForbiddenSourceHeader srcs/ bonus/ includes/
 ## 📚 Resources & References
 
 **Articles & Guides:**
-* **[Longest Increasing Subsequence (GeeksforGeeks)](https://www.geeksforgeeks.org/longest-increasing-subsequence-dp-3/)** - A comprehensive breakdown of the dynamic programming approach used to mathematically find the LIS.
-* **[The Turk Algorithm (Medium)](https://medium.com/@ali.boca.ali/push-swap-the-awesome-algorithm-92fee1412563)** - The original article by A. Yigit Ogun introducing the highly efficient Turk Algorithm, explaining the mechanical sorting logic and push cost calculations.
-* **[Push_swap Turk Algorithm Explained in 6 Steps (Medium)](https://pure-forest.medium.com/push-swap-turk-algorithm-explained-in-6-steps-4c6650a458c0)** - A fantastic supplementary article that breaks down the Turk algorithm into an easy-to-follow, step-by-step visual guide.
-* **[My implementation of the 42 push_swap project (Medium)](https://medium.com/@dansylvain84/my-implementation-of-the-42-push-swap-project-2706fd8c2e9f)** - An insightful walkthrough by a fellow 42 student detailing their specific approach, optimizations, and struggles with parsing logic.
-* **[Push_swap by ayogun (Medium)](https://medium.com/@ayogun/push-swap-c1f5d2d41e97)** - Another excellent student perspective that dives into the theory and practical C implementation of sorting algorithms for this project.
+* **[Longest Increasing Subsequence (GeeksforGeeks)](https://www.geeksforgeeks.org/longest-increasing-subsequence-dp-3/):** A comprehensive breakdown of the dynamic programming approach used to mathematically find the LIS.
+* **[The Turk Algorithm (Medium)](https://medium.com/@ali.boca.ali/push-swap-the-awesome-algorithm-92fee1412563):** The original article by A. Yigit Ogun introducing the highly efficient Turk Algorithm, explaining the mechanical sorting logic and push cost calculations.
+* **[Push_swap Turk Algorithm Explained in 6 Steps (Medium)](https://pure-forest.medium.com/push-swap-turk-algorithm-explained-in-6-steps-4c6650a458c0):** A fantastic supplementary article that breaks down the Turk algorithm into an easy-to-follow, step-by-step visual guide.
+* **[My implementation of the 42 push_swap project (Medium)](https://medium.com/@dansylvain84/my-implementation-of-the-42-push-swap-project-2706fd8c2e9f):** An insightful walkthrough by a fellow 42 student detailing their specific approach, optimizations, and struggles with parsing logic.
+* **[Push_swap by ayogun (Medium)](https://medium.com/@ayogun/push-swap-c1f5d2d41e97):** Another excellent student perspective that dives into the theory and practical C implementation of sorting algorithms for this project.
 
 **Video Tutorials:**
-* **[push_swap: a performant sorting algorithm using 2 stacks by Oceano](https://www.youtube.com/watch?v=OaG81sDEpVk)** - A legendary 42 community tutorial. It covers the complete architecture, data structures, and gives a massive visual explanation of the algorithmic logic.
-* **[push_swap TUTORIAL! by Thuggonaut](https://www.youtube.com/watch?v=wRvipSG4Mmk)** - An incredibly detailed, step-by-step video breakdown of the Turk algorithm, complete with pseudo-code and edge-case handling.
+* **[push_swap: a performant sorting algorithm using 2 stacks by Oceano](https://www.youtube.com/watch?v=OaG81sDEpVk):** A legendary 42 community tutorial. It covers the complete architecture, data structures, and gives a massive visual explanation of the algorithmic logic.
+* **[push_swap TUTORIAL! by Thuggonaut](https://www.youtube.com/watch?v=wRvipSG4Mmk):** An incredibly detailed, step-by-step video breakdown of the Turk algorithm, complete with pseudo-code and edge-case handling.
 
 **42 Standards:**
-* **[42 Norm V4](https://cdn.intra.42.fr/pdf/pdf/96987/en.norm.pdf)** - The strict coding standard for 42 C projects.
-* **[Official 42 Norminette Repository](https://github.com/42School/norminette)** - The open-source linter enforcing the strict 42 coding standard.
+* **[42 Norm V4](https://cdn.intra.42.fr/pdf/pdf/96987/en.norm.pdf):** The strict coding standard for 42 C projects.
+* **[Official 42 Norminette Repository](https://github.com/42School/norminette):** The open-source linter enforcing the strict 42 coding standard.
 
 ### 🤖 AI Usage & Transparency
 In the spirit of transparency and the learning objectives of the 42 curriculum, here is how AI tools were utilized during this project:
