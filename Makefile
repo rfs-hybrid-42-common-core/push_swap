@@ -6,7 +6,7 @@
 #    By: maaugust <maaugust@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/21 18:04:18 by maaugust          #+#    #+#              #
-#    Updated: 2026/03/24 18:25:19 by maaugust         ###   ########.fr        #
+#    Updated: 2026/03/25 15:23:39 by maaugust         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,21 +42,24 @@ SRC            = $(shell find $(SRC_PATH) -name '*.c')
 B_SRC_PATH     = ./bonus/srcs
 B_SRC          = $(shell find $(B_SRC_PATH) -name '*.c')
 
-# Object files
+# =============================== OBJECT FILES =============================== #
+# Mandatory files
 OBJ_PATH       = ./objs
 OBJ            = $(patsubst $(SRC_PATH)/%.c, $(OBJ_PATH)/%.o, $(SRC))
 
+# Bonus files
 B_OBJ_PATH     = ./bonus/objs
 B_OBJ          = $(patsubst $(B_SRC_PATH)/%.c, $(B_OBJ_PATH)/%.o, $(B_SRC))
-
 CORE_OBJ       = $(filter-out $(OBJ_PATH)/main.o, $(OBJ))
 
 # ============================ COMPILATION RULES ============================= #
+# Mandatory files
 $(OBJ_PATH)/%.o: $(SRC_PATH)/%.c
 	@mkdir -p $(dir $@)
 	@printf "$(CYAN)Compiling:$(RESET) $(YELLOW)$<$(RESET)\n"
 	@$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
-
+	
+# Bonus files
 $(B_OBJ_PATH)/%.o: $(B_SRC_PATH)/%.c
 	@mkdir -p $(dir $@)
 	@printf "$(CYAN)Compiling:$(RESET) $(YELLOW)$<$(RESET)\n"
@@ -65,12 +68,12 @@ $(B_OBJ_PATH)/%.o: $(B_SRC_PATH)/%.c
 # =============================== BUILD TARGETS ============================== #
 all: $(NAME)
 
-bonus: $(B_NAME)
-
 $(NAME): $(LIBFT_LIB) $(OBJ)
 	@printf "$(GREEN)✔ Push_swap mandatory objects built successfully.$(RESET)\n"
 	@$(CC) $(CFLAGS) $(OBJ) $(LIBFT_LIB) -o $(NAME)
 	@printf "$(GREEN)$(BOLD)✔ Build complete → $(NAME)$(RESET)\n"
+
+bonus: $(B_NAME)
 
 $(B_NAME): $(LIBFT_LIB) $(CORE_OBJ) $(B_OBJ)
 	@printf "$(GREEN)✔ Push_swap bonus objects built successfully.$(RESET)\n"
