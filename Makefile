@@ -6,7 +6,7 @@
 #    By: maaugust <maaugust@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/21 18:04:18 by maaugust          #+#    #+#              #
-#    Updated: 2026/03/25 15:23:39 by maaugust         ###   ########.fr        #
+#    Updated: 2026/03/25 15:48:05 by maaugust         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ B_NAME         = checker
 CC             = cc
 CFLAGS         = -Wall -Wextra -Werror -MMD -MP
 INCLUDES       = -Iincludes -Ilibft/includes
-B_INCLUDES     = -Ibonus/includes
+B_INCLUDES     = -Ibonus/includes -Ilibft/includes
 RM             = rm -rf
 
 # ================================== COLORS ================================== #
