@@ -113,7 +113,29 @@ To ensure your algorithm is fully optimized and memory leak-free, it is highly r
   <p><i>Example of a 500-number sort using a graphical visualizer.</i></p>
 </div>
 
-**Recommended Testers & Visualizers:**
+#### 🛡️ Memory Leak Verification (Valgrind)
+Because `push_swap` is a standalone executable, using a custom C tester is unnecessary. Instead, you must use `valgrind` to guarantee your program frees all allocated memory, especially during early termination edge cases. Test the following three scenarios to ensure a bulletproof defense:
+
+**1. The Parsing Error Leak:**
+Pass invalid arguments (letters, duplicates, out-of-bounds integers) to ensure your program safely frees the partially constructed stack before printing `Error\n`.
+```bash
+valgrind --leak-check=full ./push_swap 42 "1337 84" -100 abc 5
+```
+
+**2. The Already-Sorted Leak:**
+Pass a perfectly sorted list. The program should parse the arguments, recognize the sorted state, print absolutely nothing, and cleanly free the stacks.
+```bash
+valgrind --leak-check=full ./push_swap 1 2 3 4 5
+```
+
+**3. The Full Run Leak:**
+Run a massive, random set to ensure no temporary nodes are lost during the intense sorting loops.
+```bash
+ARG=$(seq -100 100 | shuf -n 100); valgrind --leak-check=full ./push_swap $ARG
+```
+*Expected Valgrind Output for all tests: `All heap blocks were freed -- no leaks are possible`*
+
+#### 📊 Recommended Testers & Visualizers:
 * **[Push-Swap-Tester by gemartin99](https://github.com/gemartin99/Push-Swap-Tester):** A fantastic bash script that runs hundreds of automated iterations to calculate your average operation count and catch edge-case infinite loops.
 * **[Push_swap Visualizer by o-reo](https://github.com/o-reo/push_swap_visualizer):** The classic, highly popular C++ graphical visualizer (showcased in the GIF above) that lets you watch your stacks get sorted in real-time.
   * 🔧 *Troubleshooting Note:* If you encounter a `decltype(&pclose)` compilation error on newer Linux systems when building this visualizer, open `src/pushswap.cpp`, go to line 17, and change `decltype(&pclose)` to `int (*)(FILE*)` to bypass the strict compiler warning.
